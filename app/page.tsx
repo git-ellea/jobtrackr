@@ -6,7 +6,7 @@ import { useJobStore } from "@/store/useJobStore";
 import { Column } from "@/components/kanban/Column";
 import { AddJobModal } from "@/components/kanban/AddJobModal";
 import { JobStatus } from "@/types/job";
-import { Briefcase, Plus } from "lucide-react";
+import { Briefcase } from "lucide-react";
 
 const COLUMNS: JobStatus[] = ["Wishlist", "Applied", "Interview", "Offer"];
 
@@ -34,7 +34,7 @@ export default function KanbanPage() {
   return (
     <div className="flex h-screen flex-col bg-[#020617]">
       <header className="shrink-0 border-b border-slate-900 bg-slate-950/50 px-4 py-4 md:px-8">
-        <div className="mx-auto flex max-w-[1600px] flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mx-auto flex max-w-400 flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center gap-3">
             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-600 shadow-lg shadow-blue-600/20">
               <Briefcase size={20} className="text-white" />
@@ -72,7 +72,7 @@ export default function KanbanPage() {
               {COLUMNS.map((status) => (
                 <div
                   key={status}
-                  className="w-[85vw] sm:w-[380px] lg:w-full h-full"
+                  className="w-[85vw] sm:w-95 lg:w-full h-full"
                 >
                   <Column
                     title={status}

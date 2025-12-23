@@ -17,7 +17,7 @@ export const Column = ({ title, jobs, onAddClick }: ColumnProps) => {
       <div className="mb-4 flex items-center justify-between px-2">
         <div className="flex items-center gap-2">
           <h2 className="font-bold text-slate-200 tracking-tight">{title}</h2>
-          <span className="flex h-5 min-w-[20px] items-center justify-center rounded-full bg-slate-800 px-1.5 text-[10px] font-bold text-slate-400">
+          <span className="flex h-5 min-w-5 items-center justify-center rounded-full bg-slate-800 px-1.5 text-[10px] font-bold text-slate-400">
             {jobs.length}
           </span>
         </div>
