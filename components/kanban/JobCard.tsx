@@ -50,7 +50,7 @@ export const JobCard = ({ job, index }: { job: Job; index: number }) => {
           <div className="flex flex-wrap gap-3 text-xs text-slate-500">
             <div className="flex items-center gap-1">
               <DollarSign size={12} />
-              <span>{job.salary}</span>
+              <span>{job.salary}</span> 
             </div>
             <div className="flex items-center gap-1">
               <Calendar size={12} />
