@@ -13,8 +13,17 @@ JobTrackr is a production-ready, local-first Kanban board designed to streamline
 ---
 
 ## 🖼️ Preview
-![JobTrackr Desktop Preview](./public/jobTracker_dashboard.png)
+
+| Desktop View | Mobile View |
+|-------------|-------------|
+| ![](./public/jobTracker_dashboard.png) | ![](./public/mobile_jobTracker_dashboard.png) |
+
+| Add Job Modal |
+|--------------|
+| ![](./public/add_job_to_dashboard.png) |
+
 *A "Dark Luxury" aesthetic featuring responsive columns and priority badges.*
+
 
 ---
 
