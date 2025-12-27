@@ -7,6 +7,8 @@ import { Column } from "@/components/kanban/Column";
 import { AddJobModal } from "@/components/kanban/AddJobModal";
 import { JobStatus } from "@/types/job";
 import { Briefcase } from "lucide-react";
+import { FeedbackModal } from "@/components/ui/FeedbackModal";
+import { Github } from "lucide-react";
 
 const COLUMNS: JobStatus[] = ["Wishlist", "Applied", "Interview", "Offer"];
 
@@ -47,20 +49,29 @@ export default function KanbanPage() {
             </div>
           </div>
 
-          <div className="flex gap-4 overflow-x-auto no-scrollbar sm:gap-8">
-            {COLUMNS.map((col) => (
-              <div
-                key={col}
-                className="shrink-0 border-l border-slate-800 pl-4 first:border-none first:pl-0"
-              >
-                <p className="text-[10px] font-bold uppercase tracking-widest text-slate-500">
-                  {col}
-                </p>
-                <p className="text-lg font-semibold text-slate-200">
-                  {jobs.filter((j) => j.status === col).length}
-                </p>
-              </div>
-            ))}
+          <div className="flex items-center gap-6">
+            <div className="flex gap-4 overflow-x-auto no-scrollbar sm:gap-8">
+              {COLUMNS.map((col) => (
+                <div
+                  key={col}
+                  className="shrink-0 border-l border-slate-800 pl-4 first:border-none first:pl-0"
+                >
+                  <p className="text-[10px] font-bold uppercase tracking-widest text-slate-500">
+                    {col}
+                  </p>
+                  <p className="text-lg font-semibold text-slate-200">
+                    {jobs.filter((j) => j.status === col).length}
+                  </p>
+                </div>
+              ))}
+            </div>
+            <a
+              href="https://github.com/git-ellea/jobtrackr"
+              target="_blank"
+              className="text-slate-500 hover:text-white hover:border-white rounded-xl border border-slate-500 p-2"
+            >
+              <Github size={20} />
+            </a>
           </div>
         </div>
       </header>
@@ -70,10 +81,7 @@ export default function KanbanPage() {
           <DragDropContext onDragEnd={onDragEnd}>
             <div className="flex h-full min-w-max gap-4 md:gap-6 lg:min-w-0 lg:grid lg:grid-cols-4">
               {COLUMNS.map((status) => (
-                <div
-                  key={status}
-                  className="w-[85vw] sm:w-95 lg:w-full h-full"
-                >
+                <div key={status} className="w-[85vw] sm:w-95 lg:w-full h-full">
                   <Column
                     title={status}
                     jobs={jobs.filter((j) => j.status === status)}
@@ -94,6 +102,8 @@ export default function KanbanPage() {
         onClose={() => setIsModalOpen(false)}
         defaultStatus={activeStatus}
       />
+
+      <FeedbackModal />
     </div>
   );
 }
