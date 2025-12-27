@@ -13,17 +13,17 @@ export async function POST(req: Request) {
     }
 
     const transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com",
-  port: 587,
-  secure: false,
-  auth: {
-    user: process.env.EMAIL_USER as string,
-    pass: process.env.EMAIL_PASS as string,
-  },
-  tls: {
-    rejectUnauthorized: false 
-  }
-});
+      host: "smtp.gmail.com",
+      port: 587,
+      secure: false,
+      auth: {
+        user: process.env.EMAIL_USER as string,
+        pass: process.env.EMAIL_PASS as string,
+      },
+      tls: {
+        rejectUnauthorized: false,
+      },
+    });
 
     const mailOptions = {
       from: `"${name}" <${process.env.EMAIL_USER}>`,

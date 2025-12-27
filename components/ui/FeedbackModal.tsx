@@ -42,7 +42,7 @@ export const FeedbackModal = () => {
         }, 3000);
       }
     } catch (error) {
-      setFormData({ name: "", email: "", message: "" });  
+      setFormData({ name: "", email: "", message: "" });
       alert("Something went wrong. Please try again.");
     } finally {
       setLoading(false);
