@@ -12,7 +12,7 @@ JobTrackr is a production-ready, local-first Kanban board designed to streamline
 
 ---
 
-## 🖼️ Preview
+## Preview
 
 | Desktop View | Mobile View |
 |-------------|-------------|
@@ -37,7 +37,7 @@ JobTrackr is a production-ready, local-first Kanban board designed to streamline
 
 ---
 
-## 🚀 Technical Architecture (The Cycle)
+## Technical Architecture (The Cycle)
 
 This project is built using a strict **Unidirectional Data Flow** pattern, making the codebase highly predictable and maintainable:
 
@@ -49,7 +49,7 @@ This project is built using a strict **Unidirectional Data Flow** pattern, makin
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Framework:** Next.js 14 (App Router)
 - **Language:** TypeScript
@@ -59,7 +59,7 @@ This project is built using a strict **Unidirectional Data Flow** pattern, makin
 
 ---
 
-## 📦 Getting Started
+## Getting Started
 
 ```bash
 git clone https://github.com/git-ellea/jobtrackr.git
